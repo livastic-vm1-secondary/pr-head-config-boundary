@@ -3,6 +3,10 @@ merge_protections:
     if: true
     success_conditions: true
 
+merge_protections_settings:
+  auto_merge_conditions:
+    - label = vm1-recent-push-impact
+
 pull_request_rules:
   - name: BASE_CONFIG_RULE_61A4
     conditions:
