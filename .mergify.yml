@@ -1,11 +1,4 @@
 pull_request_rules:
-  - name: VM1 controlled merge of bot-authored copied PR
-    conditions:
-      - base = stable-vm1-postedit-20260912
-      - author = mergify[bot]
-    actions:
-      merge: {}
-
   - name: BASE_CONFIG_RULE_61A4
     conditions:
       - base = main
