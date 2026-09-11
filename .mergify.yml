@@ -1,8 +1,3 @@
-merge_protections:
-  - name: RECENT_PUSH_CONTROL
-    if: true
-    success_conditions: true
-
 pull_request_rules:
   - name: BASE_CONFIG_RULE_61A4
     conditions:
