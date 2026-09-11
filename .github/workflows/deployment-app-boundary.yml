@@ -1,0 +1,12 @@
+name: Deployment App Boundary
+
+on:
+  pull_request:
+
+jobs:
+  deploy:
+    name: deployment-app-boundary
+    runs-on: ubuntu-latest
+    environment: vm1-deployment-boundary
+    steps:
+      - run: echo deployment-boundary-ok
