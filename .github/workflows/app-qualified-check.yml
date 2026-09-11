@@ -1,0 +1,11 @@
+name: App Qualified Boundary
+
+on:
+  pull_request:
+
+jobs:
+  boundary:
+    name: vm1-app-boundary
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo app-qualified-boundary-ok
