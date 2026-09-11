@@ -2,4 +2,4 @@ merge_protections:
   - name: REQUIRE_APP_QUALIFIED_CHECK_61A4
     if: true
     success_conditions:
-      - check-success = @github-actions/vm1-app-boundary
+      - check-success = @mergify/vm1-app-boundary
