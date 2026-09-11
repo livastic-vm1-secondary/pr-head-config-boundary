@@ -1,5 +1,5 @@
 merge_protections:
-  - name: REQUIRE_APP_QUALIFIED_DEPLOYMENT_61A4
+  - name: REQUIRE_BARE_DEPLOYMENT_CONTROL_61A4
     if: true
     success_conditions:
-      - deployment-success = @github-actions/vm1-deployment-boundary
+      - deployment-success = vm1-deployment-boundary
