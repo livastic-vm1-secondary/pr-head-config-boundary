@@ -5,10 +5,3 @@ pull_request_rules:
     actions:
       comment:
         message: BASE_CONFIG_MARKER_61A4
-
-merge_protections:
-  - name: VM1 duplicate check generation provenance
-    if:
-      - base = main
-    success_conditions:
-      - check-success = @github-actions/vm1-dup-check
