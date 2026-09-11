@@ -1,7 +1,5 @@
-pull_request_rules:
-  - name: BASE_CONFIG_RULE_61A4
-    conditions:
-      - base = main
-    actions:
-      comment:
-        message: BASE_CONFIG_MARKER_61A4
+merge_protections:
+  - name: REQUIRE_APP_QUALIFIED_DEPLOYMENT_61A4
+    if: true
+    success_conditions:
+      - deployment-success = @github-actions/vm1-deployment-boundary
