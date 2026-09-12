@@ -1,0 +1,16 @@
+name: VM1 Cancel Runs On PR Close
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel related runs
+        uses: Mergifyio/gha-cancel-workflow-runs-on-pr-close@v1
