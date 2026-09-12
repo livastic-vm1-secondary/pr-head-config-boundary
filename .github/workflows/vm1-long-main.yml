@@ -1,0 +1,18 @@
+name: VM1 Long Trusted Main Run
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  long:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trusted long-running job
+        run: |
+          echo "VM1 trusted main run started"
+          sleep 180
+          echo "VM1 trusted main run completed"
