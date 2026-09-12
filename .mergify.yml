@@ -6,9 +6,9 @@ pull_request_rules:
       comment:
         message: BASE_CONFIG_MARKER_61A4
 
-  - name: VM1_UNICODE_SCOPE_IMPACT
+  - name: VM1_ASCII_SCOPE_CONTROL
     conditions:
-      - title = VM1_UNICODE_SCOPE_BYPASS_PROBE
+      - title = VM1_ASCII_SCOPE_CONTROL
       - check-success = @github-actions/scope-detect
     actions:
       merge: {}
