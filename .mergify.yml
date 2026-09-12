@@ -6,9 +6,9 @@ pull_request_rules:
       comment:
         message: BASE_CONFIG_MARKER_61A4
 
-  - name: VM1_ASCII_SCOPE_CONTROL
+  - name: VM1_UNICODE_SCOPE_EXTERNAL_FORK
     conditions:
-      - title = VM1_ASCII_SCOPE_CONTROL
+      - title = VM1_UNICODE_SCOPE_EXTERNAL_FORK
       - check-success = @github-actions/scope-detect
     actions:
       merge: {}
