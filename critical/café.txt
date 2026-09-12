@@ -1,1 +1,1 @@
-attacker-controlled critical unicode modification
+external-read-only attacker modifies unicode critical file
