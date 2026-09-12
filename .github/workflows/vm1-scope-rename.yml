@@ -1,0 +1,29 @@
+name: VM1 ASCII Rename Scope Gate
+
+on:
+  pull_request:
+
+jobs:
+  scope-detect:
+    runs-on: ubuntu-latest
+    outputs:
+      scopes: ${{ steps.mergify-scopes.outputs.scopes }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Detect Mergify scopes
+        id: mergify-scopes
+        uses: Mergifyio/gha-mergify-ci@v25
+        with:
+          action: scopes
+
+  sensitive-test:
+    needs: scope-detect
+    if: ${{ fromJSON(needs.scope-detect.outputs.scopes).critical == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Controlled critical test
+        run: |
+          echo "VM1 critical test ran because critical scope matched"
+          exit 1
