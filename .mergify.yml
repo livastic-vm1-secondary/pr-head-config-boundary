@@ -5,11 +5,3 @@ pull_request_rules:
     actions:
       comment:
         message: BASE_CONFIG_MARKER_61A4
-
-  - name: VM1_CODEOWNERS_EMAIL_OWNER_PARITY
-    conditions:
-      - title = VM1_CODEOWNERS_EMAIL_OWNER_PARITY
-      - label = vm1-codeowners-email-trigger
-    actions:
-      merge:
-        method: squash
