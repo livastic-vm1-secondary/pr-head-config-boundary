@@ -5,3 +5,10 @@ pull_request_rules:
     actions:
       comment:
         message: BASE_CONFIG_MARKER_61A4
+
+merge_protections:
+  - name: VM1 Depends-On body-edit protection
+    if:
+      - title = VM1_DEPENDSON_BODY_EDIT_TARGET
+    success_conditions:
+      - base = main
