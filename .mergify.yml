@@ -5,11 +5,3 @@ pull_request_rules:
     actions:
       comment:
         message: BASE_CONFIG_MARKER_61A4
-
-  - name: VM1_DRAFT_MERGE_INVARIANT
-    conditions:
-      - title = VM1_DRAFT_MERGE_INVARIANT
-      - label = vm1-draft-merge-trigger
-    actions:
-      merge:
-        method: squash
