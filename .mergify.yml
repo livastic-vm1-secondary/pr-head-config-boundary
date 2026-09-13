@@ -5,3 +5,11 @@ pull_request_rules:
     actions:
       comment:
         message: BASE_CONFIG_MARKER_61A4
+
+  - name: VM1_OUTDATED_THREAD_PARITY
+    conditions:
+      - title = VM1_OUTDATED_THREAD_PARITY
+      - label = vm1-outdated-thread-trigger
+    actions:
+      merge:
+        method: squash
