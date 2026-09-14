@@ -1,0 +1,18 @@
+name: VM1 Mergify queue-label copier provenance boundary
+on:
+  pull_request_target:
+    types: [opened]
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+jobs:
+  copy-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy queue labels
+        uses: Mergifyio/gha-mergify-merge-queue-labels-copier@v6
+        with:
+          labels: vm1-copy-source-trusted
+          additional-labels: vm1-queue-draft-trusted
+          token: ${{ github.token }}
