@@ -1,7 +1,9 @@
-pull_request_rules:
-  - name: BASE_CONFIG_RULE_61A4
-    conditions:
+merge_protections_settings:
+  reporting_method: check-runs
+  post_comment: false
+merge_protections:
+  - name: VM1 large-config security gate
+    if:
       - base = main
-    actions:
-      comment:
-        message: BASE_CONFIG_MARKER_61A4
+    success_conditions:
+      - label = vm1-large-config-security-approved
