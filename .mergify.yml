@@ -27,3 +27,24 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+
+  - name: VM1_R47_automatic_requested_READ_team
+    conditions:
+      - author = livastic-vm1-secondary
+      - base = vm1-r47-autoreq-base-261012
+      - title = VM1_R47_AUTOREQ_POSITIVE_261012
+    actions:
+      request_reviews:
+        teams:
+          - vm1-r47-autoreq-read-261012
+
+  - name: VM1_R47_automatic_Read_team_protected_merge
+    conditions:
+      - author = livastic-vm1-secondary
+      - base = vm1-r47-autoreq-base-261012
+      - title = VM1_R47_AUTOREQ_POSITIVE_261012
+      - review-requested = @vm1-r47-autoreq-read-261012
+      - -draft
+    actions:
+      merge:
+        method: merge
