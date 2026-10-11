@@ -27,16 +27,3 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-
-
-  - name: VM1_REVIEWOPEN_H0_TO_H1_261011
-    conditions:
-      - base = vm1-review-open-base-261011
-      - title = VM1_REVIEWOPEN_261011
-      - author = livastic-vm1-secondary
-      - check-success = vm1-review-open-gate-261011
-    actions:
-      review:
-        type: APPROVE
-        message: VM1 controlled open PR head freshness test 261011
-
