@@ -1,0 +1,1 @@
+security: {require_review: true, allow_deploy: false}
